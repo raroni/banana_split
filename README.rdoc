@@ -1,0 +1,28 @@
+== Banana Split
+
+Banana Split is a simple lightweight split testing utility for Rails. It makes it extremely easy to tests different designs on your users:
+
+  <%= ab_test :buy_form, :colorful => 'shop/colorful_buy_form', :simplistic => 'shop/simplistic_buy_form' %>
+
+Here, Bananasplit will render the shop/colorful_buy_form partial 50% of the times, and shop/simplistic_buy_form the other 50%. On the immediate action after purchase do like so to complete the goal:
+
+  def receipt
+	ab_goal :buy_form
+	# whatever...
+  end
+
+The ab_goal takes the value of the goal completion as a second argument - it defaults to 1.
+
+Banana Split currently provides no ways of rendering the split test results but the included models makes it very easy to do so.
+
+== Installation
+
+Add banana_split to your Gemfile:
+
+  gem 'banana_split'
+
+And run the installer:
+
+  rails generate banana_split
+
+... and you're ready to go :)
