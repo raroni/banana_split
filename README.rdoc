@@ -13,6 +13,20 @@ Here, Bananasplit will render the shop/colorful_buy_form partial 50% of the time
 
 The ab_goal takes the value of the goal completion as a second argument - it defaults to 1.
 
+== Other examples
+
+  <%= submit_tag ab_test(:sign_up_button_text, {
+    :standard => { :text => 'Create user' },
+    :funky => { :text => 'Come on in!' }
+  }) %>
+
+  <%= submit_tag ab_test(:welcome_message, {
+    :simple => { :partial => 'welcome/simple_welcome_message', :locals => { :statistics => @statistics },
+    :complex => { :partial => 'welcome/complex_welcome_message', :locals => { :statistics => @statistics }
+  }) %>
+
+== Showing test results
+
 Banana Split currently provides no ways of rendering the split test results but the included models makes it very easy to do so.
 
 == Installation
