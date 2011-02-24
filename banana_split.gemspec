@@ -19,4 +19,6 @@ Gem::Specification.new do |gem|
 #  gem.extra_rdoc_files = ['README.rdoc', 'LICENSE', 'CHANGELOG.rdoc']
   
   gem.files = Dir['{bin,lib,rails,test,spec}/**/*', 'README*', 'LICENSE*']
+
+  gem.add_dependency 'rails', '~> 3.0'
 end
