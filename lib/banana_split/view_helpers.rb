@@ -10,7 +10,7 @@ module BananaSplit
       
       test_run = test.runs.create({
         :ab_test_design_id => design.id, 
-        :user_id => current_user_id
+        :session_id => session_id
       })
       
       design_render_options ? render(design_render_options) : nil

@@ -10,7 +10,7 @@ class CreateBananaSplitTables < ActiveRecord::Migration
     end
     
     create_table(:ab_test_runs) do |t|
-      t.references :user
+      t.string :session_id
       t.references :ab_test
       t.references :ab_test_design
       t.integer :value, :null => false, :default => 0
