@@ -8,7 +8,7 @@ module BananaSplit
 
       def create_models
         copy_file "models/ab_test.rb", "app/models/ab_test.rb"
-        copy_file "models/ab_test_design.rb", "app/models/ab_test_design.rb"
+        copy_file "models/ab_test_variation.rb", "app/models/ab_test_variation.rb"
         copy_file "models/ab_test_run.rb", "app/models/ab_test_run.rb"
       end
 

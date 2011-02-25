@@ -1,4 +1,4 @@
 class AbTestRun < ActiveRecord::Base
   belongs_to :ab_test
-  belongs_to :ab_test_design
+  belongs_to :ab_test_variation
 end
