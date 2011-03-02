@@ -17,9 +17,14 @@ module BananaSplit
       end
 
       def session_id
+        banana_init_session if request.session_options[:id].blank?
         request.session_options[:id]
       end
     end
 
+    def banana_init_session
+      session['banana_session_init_hack'] = 'this is a bit of a hack to make sure the session is always initialized'
+      session.delete('banana_session_init_hack')
+    end
   end
 end
