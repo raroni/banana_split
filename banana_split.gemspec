@@ -20,5 +20,5 @@ Gem::Specification.new do |gem|
   
   gem.files = Dir['{bin,lib,rails,test,spec}/**/*', 'README*', 'LICENSE*']
 
-  gem.add_dependency 'rails', '~> 3.0'
+  gem.add_dependency 'rails', '~> 3.2'
 end
